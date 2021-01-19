@@ -2,3 +2,35 @@ https://www.urbackup.org/download.html
 linux module https://github.com/datto/dattobd
 Amanda - The most recent stable release is version 3.5.1, released on December 1, 2017. 
 http://www.amanda.org/
+https://www.zmanda.com/downloads/
+
+dpkg -i amanda-backup-client_3.5-1Debian60_amd64.deb 
+(Reading database ... 252088 files and directories currently installed.)
+Preparing to unpack amanda-backup-client_3.5-1Debian60_amd64.deb ...
+Unpacking amanda-backup-client (3.5-1Debian60) ...
+dpkg: dependency problems prevent configuration of amanda-backup-client:
+ amanda-backup-client depends on xinetd; however:
+  Package xinetd is not installed.
+ amanda-backup-client depends on libssl0.9.8 (>= 0.9.8m-1); however:
+  Package libssl0.9.8 is not installed.
+
+dpkg: error processing package amanda-backup-client (--install):
+ dependency problems - leaving unconfigured
+Processing triggers for man-db (2.7.5-1) ...
+Errors were encountered while processing:
+ amanda-backup-client
+ 
+ 
+ dpkg -i amanda-backup-server_3.5-1Debian60_amd64.deb 
+Selecting previously unselected package amanda-backup-server.
+(Reading database ... 252083 files and directories currently installed.)
+Preparing to unpack amanda-backup-server_3.5-1Debian60_amd64.deb ...
+Unpacking amanda-backup-server (3.5-1Debian60) ...
+dpkg: dependency problems prevent configuration of amanda-backup-server:
+ amanda-backup-server depends on xinetd; however:
+  Package xinetd is not installed.
+ amanda-backup-server depends on mailx | bsd-mailx; however:
+  Package mailx is not installed.
+  Package bsd-mailx is not installed.
+ amanda-backup-server depends on libssl0.9.8 (>= 0.9.8m-1); however:
+  Package libssl0.9.8 is not installed.
