@@ -11,6 +11,8 @@ urbackupclientctl list-backupdirs
 urbackupclientctl start -f
 urbackupclientctl restore-start -b 3
 
+/usr/local/sbin/uninstall_urbackupclient
+
 Amanda - The most recent stable release is version 3.5.1, released on December 1, 2017. 
 http://www.amanda.org/
 https://www.zmanda.com/downloads/
