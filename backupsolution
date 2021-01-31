@@ -1,5 +1,16 @@
 https://www.urbackup.org/download.html
 linux module https://github.com/datto/dattobd
+
+server
+docker run -d --name backup-server -v /backups:/backups -v /database:/var/urbackup -p 55413-55415:55413-55415 -p 35623:35623/udp uroni/urbackup-server
+
+client
+urbackupclientctl add-backupdir -d /etc/hosts
+urbackupclientctl status
+urbackupclientctl list-backupdirs
+urbackupclientctl start -f
+urbackupclientctl restore-start -b 3
+
 Amanda - The most recent stable release is version 3.5.1, released on December 1, 2017. 
 http://www.amanda.org/
 https://www.zmanda.com/downloads/
