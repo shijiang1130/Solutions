@@ -1,0 +1,88 @@
+server side:
+yum install ipa-server.x86_64 ipa-server-dns.noarch -y
+ipa-server-install --setup-dns --allow-zone-overlap
+
+Client side:
+yum install ipa-client -y
+ipa-client-install
+
+WARNING: ntpd time&date synchronization service will not be configured as
+conflicting service (chronyd) is enabled
+Use --force-ntpd option to disable it and force configuration of ntpd
+Discovery was successful!
+Client hostname: node2.example.com
+Realm: EXAMPLE.COM
+DNS Domain: example.com
+
+IPA Server: node1.example.com
+
+BaseDN: dc=example,dc=com
+
+Continue to configure the system with these values? [no]: yes
+
+Skipping synchronizing time with NTP server.
+
+User authorized to enroll computers: admin
+
+Password for admin@EXAMPLE.COM:
+
+Successfully retrieved CA cert
+
+    Subject:     CN=Certificate Authority,O=EXAMPLE.COM
+
+    Issuer:      CN=Certificate Authority,O=EXAMPLE.COM
+
+    Valid From:  2019-04-09 12:26:00
+
+    Valid Until: 2039-04-09 12:26:00
+
+
+Enrolled in IPA realm EXAMPLE.COM
+
+Created /etc/ipa/default.conf
+
+New SSSD config will be created
+
+Configured sudoers in /etc/nsswitch.conf
+
+Configured /etc/sssd/sssd.conf
+
+Configured /etc/krb5.conf for IPA realm EXAMPLE.COM
+
+trying https://node1.example.com/ipa/json
+
+[try 1]: Forwarding 'schema' to json server 'https://node1.example.com/ipa/json'
+
+trying https://node1.example.com/ipa/session/json
+
+[try 1]: Forwarding 'ping' to json server 'https://node1.example.com/ipa/session/json'
+
+[try 1]: Forwarding 'ca_is_enabled' to json server 'https://node1.example.com/ipa/session/json'
+
+Systemwide CA database updated.
+
+Hostname (node2.example.com) does not have A/AAAA record.
+
+Missing reverse record(s) for address(es): 10.0.2.31.
+
+Adding SSH public key from /etc/ssh/ssh_host_ecdsa_key.pub
+
+Adding SSH public key from /etc/ssh/ssh_host_rsa_key.pub
+
+Adding SSH public key from /etc/ssh/ssh_host_ed25519_key.pub
+
+[try 1]: Forwarding 'host_mod' to json server 'https://node1.example.com/ipa/session/json'
+
+SSSD enabled
+
+Configured /etc/openldap/ldap.conf
+
+Configured /etc/ssh/ssh_config
+
+Configured /etc/ssh/sshd_config
+
+Configuring example.com as NIS domain.
+
+Client configuration complete.
+
+The ipa-client-install command was successful
