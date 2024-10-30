@@ -1,2 +1,16 @@
 https://goaccess.io/get-started
 grep '25\/Jan\/2019' access.log | grep '192.168.10'| awk -F ' ' '{print $9 " " $7}' | sort | uniq -c  
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html
+https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
+elastic start and stop
+docker stop logstash01
+docker stop kib01
+docker stop es01
+docker start es01
+docker start kib01
+docker start logstash01
+
+client side:
+filebeat
+https://www.elastic.co/cn/downloads/beats/filebeat
